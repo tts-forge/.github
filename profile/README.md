@@ -1,12 +1,103 @@
-## Hi there 👋
+### Participant
 
-<!--
+- auth
+	- login w google
+	- join link
+	- run experiment
 
-**Here are some ideas to get you started:**
+### ADMIN 
 
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+Minimal features
+
+- auth
+	- login
+	- sign up
+	- reset password
+- admin user
+	- username
+	- password
+	- name
+	- alias
+	- institution
+	- phone or mail
+	- description
+	- etc
+- projects
+	- CRUD
+	- join participant
+		- link w hash
+	- DTO
+		- participants
+		- description
+		- alias
+		- createdAt
+		- updateAt
+		- experiments
+- Expirements
+	- CRUD
+	- DTO
+		- uuid
+		- enabled
+		- tour
+		- steps
+		- alias
+		- description
+		- created_at
+		- updated_at
+	- tour - step by step
+		- steps
+			- step DTO
+				- uuid
+				- alias
+				- type (screen, simple form, demo, task)
+				- data
+					- screen_uuid
+					- js - webgazer - experiment feature
+					- artefact_uuid (form)
+	- artefacts
+		- uuid
+		- type (audio, picture, form)
+		- created_at
+		- updated_at
+		- alias
+		- used_by
+			- screen__uuid
+		- pictureData
+			- url
+		- audioData
+			- src
+		- formData
+			- inputs
+				- type (checkbox, text, textarea, radio group, select)
+				- label
+				- options
+					- arr [ ]
+						- label
+						- value
+	- screens
+		- CRUD
+		- screen DTO
+			- uuid
+			- alias
+			- used_by
+				- step__uuid
+			- items
+				- type (artefact, form )
+				- position
+				- area (heading, content, footer)
+				- v_align
+				- h_align 
+
+
+
+
+### React Project minimal
+
+- i18n (internationalization)
+	- ptBr
+	- enUs
+- context api
+	- auth / role
+- react router dom
+- ui lib
+- axios
